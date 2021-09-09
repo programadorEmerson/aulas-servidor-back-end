@@ -14,7 +14,8 @@
     "express": "^4.17.1",
     "mongodb": "^4.1.1",
     "mongose": "^0.0.2-security",
-    "sucrase": "^3.20.1"
+    "sucrase": "^3.20.1",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
