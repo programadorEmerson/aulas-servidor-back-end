@@ -1,4 +1,3 @@
-import { v4 as newUuid } from 'uuid';
 import connection from './mongoConnection';
 
 const getAll = async () => {
@@ -8,9 +7,9 @@ const getAll = async () => {
 
 const newUser = async ({ email, senha }) => {
   const db = await connection();
-  const uuid = newUuid();
-  await db.collection('usuarios').insertOne({ email, senha, uuid });
-  return { email, uuid };
+  const user = await db.collection('usuarios').insertOne({ email, senha });
+  const { insertedId: _id } = user;
+  return { email, _id };
 };
 
 const userExists = async ({ email, uuid }) => {

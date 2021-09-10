@@ -1,4 +1,6 @@
-import { getAll, newUser, userExists } from '../models/usuario.model';
+import {
+  getAll, newUser, userExists,
+} from '../models/usuario.model';
 
 const todos = async () => {
   const users = await getAll();
@@ -16,4 +18,6 @@ const criar = async ({ email, senha }) => {
 
 const login = async () => null;
 
-export { todos, login, criar };
+export {
+  todos, login, criar,
+};
